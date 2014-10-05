@@ -1,0 +1,26 @@
+{% extends '::base.html.twig' %}
+
+
+{% block body %}
+
+    {{  dump(data) }}
+    <table>
+        {% for player in data.result.players %}
+        <tr>
+            <td>
+                {{ player.account_id }}
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
+
+{% block javascripts_head %}
+<script src="{{ asset('bundles/fpdmain/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js') }}"></script>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('bundles/fpdmain/js/vendor/jquery-1.11.1.min.js') }}"></script>
+    <script src="{{ asset('bundles/fpdmain/js/plugins.js') }}"></script>
+    <script src="{{ asset('bundles/fpdmain/js/main.js') }}"></script>
+{% endblock %}

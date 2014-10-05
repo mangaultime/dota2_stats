@@ -1,0 +1,12 @@
+#fdp_dota2_store:
+#    resource: "@FDPDota2StoreBundle/Resources/config/routing.yml"
+#    prefix:   /store
+
+#fdp_dota2_api:
+#    resource: "@FDPDota2ApiBundle/Resources/config/routing.yml"
+#    prefix:   /
+
+fpd_main:
+    resource: "@FDPMainBundle/Resources/config/routing.yml"
+    prefix:   /
+

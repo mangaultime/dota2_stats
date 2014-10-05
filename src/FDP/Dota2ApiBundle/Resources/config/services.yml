@@ -1,0 +1,4 @@
+services:
+#    fdp_dota2_api.example:
+#        class: FDP\Dota2ApiBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

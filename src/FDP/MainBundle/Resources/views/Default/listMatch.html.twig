@@ -1,0 +1,66 @@
+{% extends '::baseDota2.html.twig' %}
+
+{% block body %}
+    <hr />
+    {% for v in matches %}
+        <h3 class="text text-center text-title">{{ v.matchId }}</h3>
+        <table class="table table-list-match">
+            <thead>
+                <tr>
+                    <th colspan="2">player</th>
+                    <th rowspan="2">level</th>
+                    <th colspan="3">performance</th>
+                    <th colspan="2">farm</th>
+                    <th colspan="2">gain</th>
+                    <th colspan="3">damage</th>
+                    <th rowspan="2">items</th>
+                </tr>
+                <tr>
+                    <th>hero</th>
+                    <th>name</th>
+                    <th>kill</th>
+                    <th>death</th>
+                    <th>assist</th>
+                    <th>LH</th>
+                    <th>DN</th>
+                    <th>gold/min</th>
+                    <th>xp/min</th>
+                    <th>heroe</th>
+                    <th>tower</th>
+                    <th>heal</th>
+                </tr>
+            </thead>
+            <tfoot></tfoot>
+            <tbody>
+                {% for p in v.players %}
+                    <tr class="{{(loop.index > 5)?'radiant':'dire'}} {{v.radiantWin?'radiantWin':'direWin'}}">
+                        <td><img class="img-hero" src="{{ p.heroId|srcImgHero }}" /></td>
+                        <td>{{ p.accountId }}</td>
+                        <td>{{ p.level }}</td>
+                        <td>{{ p.kills }}</td>
+                        <td>{{ p.deaths }}</td>
+                        <td>{{ p.assists }}</td>
+                        <td>{{ p.lastHits }}</td>
+                        <td>{{ p.denies }}</td>
+                        <td>{{ p.goldPerMin }}</td>
+                        <td>{{ p.xpPerMin }}</td>
+                        <td>{{ p.heroDamage }}</td>
+                        <td>{{ p.towerDamage }}</td>
+                        <td>{{ p.heroHealing }}</td>
+                        <td>
+                            {%- if p.item0 != 0 -%}<img class="img-item" src="{{ p.item0 }}" />{%- endif -%}
+                            {%- if p.item1 != 0 -%}<img class="img-item" src="{{ p.item1 }}" />{%- endif -%}
+                            {%- if p.item2 != 0 -%}<img class="img-item" src="{{ p.item2 }}" />{%- endif -%}
+                            {%- if p.item3 != 0 -%}<img class="img-item" src="{{ p.item3 }}" />{%- endif -%}
+                            {%- if p.item4 != 0 -%}<img class="img-item" src="{{ p.item4 }}" />{%- endif -%}
+                            {%- if p.item5 != 0 -%}<img class="img-item" src="{{ p.item5 }}" />{%- endif -%}
+                        </td>
+
+                    </tr>
+                {% endfor %}
+            </tbody>
+
+        </table>
+        <hr />
+    {% endfor %}
+{% endblock %}

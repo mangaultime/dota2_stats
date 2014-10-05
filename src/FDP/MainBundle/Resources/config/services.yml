@@ -1,0 +1,14 @@
+parameters:
+    dota2.stats.urlImgItem: http://cdn.dota2.com/apps/dota2/images/items/%s_lg.png
+    dota2.stats.urlImgHero: http://cdn.dota2.com/apps/dota2/images/heroes/%s_full.png
+
+services:
+    dota2.stats.twig.imageExtension:
+        class: FDP\MainBundle\Twig\ImageExtension
+        arguments: ["@service_container"]
+        tags:
+            - { name: twig.extension }
+
+#    fpd_main.example:
+#        class: FPD\MainBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

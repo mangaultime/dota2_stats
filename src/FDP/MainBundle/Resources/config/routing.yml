@@ -1,0 +1,24 @@
+fpd_main_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: FDPMainBundle:Default:index }
+
+dota2_stats_gamematchdetails:
+    path:       /
+    defaults: { _controller: FDPMainBundle:Default:gameMatchDetails }
+
+
+dota2.stats.routing.listPlayer:
+    path:     /list/player
+    defaults: { _controller: FDPMainBundle:Default:listPlayer }
+
+dota2.stats.routing.listMatch:
+    path:     /list/match
+    defaults: { _controller: FDPMainBundle:Default:listMatch }
+
+dota2.stats.routing.admin:
+    path:     /admin
+    defaults: { _controller: FDPMainBundle:Admin:index }
+
+dota2_stats_install:
+    path:     /install
+    defaults: { _controller: FDPMainBundle:Install:install }

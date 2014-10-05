@@ -1,0 +1,38 @@
+services:
+    dota2.stats.store.playered:
+        class: FDP\Dota2StoreBundle\Document\Playered
+        arguments: ["@doctrine_mongodb"]
+#
+#    fdp_dota2_store.example:
+#        class: FDP\Dota2StoreBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
+
+#    fdp_dota2_store.abilities_installer:
+#        class:     FDP\Dota2StoreBundle\Install\Abilities
+#        calls:
+#            - [createDatabase, ["@service_container"]]
+#
+#    fdp_dota2_store.heroes_installer:
+#        class:     FDP\Dota2StoreBundle\Install\Heroes
+#        calls:
+#            - [createDatabase, ["@service_container"]]
+#
+#    fdp_dota2_store.items_installer:
+#        class:     FDP\Dota2StoreBundle\Install\Items
+#        calls:
+#            - [createDatabase, ["@service_container"]]
+#
+#    fdp_dota2_store.lobbies_installer:
+#        class:     FDP\Dota2StoreBundle\Install\Lobbies
+#        calls:
+#            - [createDatabase, ["@service_container"]]
+#
+#    fdp_dota2_store.mods_installer:
+#        class:     FDP\Dota2StoreBundle\Install\Mods
+#        calls:
+#            - [createDatabase, ["@service_container"]]
+#
+#    fdp_dota2_store.regions_installer:
+#        class:     FDP\Dota2StoreBundle\Install\Regions
+#        calls:
+#            - [createDatabase, ["@service_container"]]

@@ -1,0 +1,3 @@
+fdp_dota2_api_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: FDPDota2ApiBundle:Default:index }
